@@ -1,62 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Portfolio of J Nithish, a passionate web developer skilled in web development, C++, Python, JavaScript, and algorithms.">
+    <meta name="keywords" content="J Nithish, portfolio, web developer, DAA project, KLE Technological University">
+    <meta name="author" content="J Nithish">
+    <meta property="og:title" content="J Nithish - Web Developer Portfolio">
+    <meta property="og:description" content="Explore my skills, projects, and contact details.">
+    <meta property="og:image" content="your-image-link-here.jpg">
+    <meta property="og:url" content="your-portfolio-link">
+    <title>Nithish - Portfolio</title>
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+    <!-- Styling CSS -->
+    <link rel="stylesheet" id="themeStylesheet" href="./style.css">
+
+    <!-- External Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <h1>Hello, I'm Chirag 👋</h1>
-        <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
+        <div>
+            <a href="./index.html"><span class="logo"> MY PORTFOLIO</span></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
     </header>
 
-    <section>
-        <h2>🛠️ Projects</h2>
-        <ul>
-            <li><strong>Project 1</strong>:A Smart city system to supply electricity depending on the requirements and usage of electricity of the areas</li>
-        </ul>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div>
+                <div>
+                    <h4 title="Hello, How are you?">Hi, There!👋</h4>
+                    <h2 class="hero-section__title">I'm <span>J NITHISH</span></h2>
+                    <p class="hero-section__desc">I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
+                </div>
+            </div>
+        </section>
 
-        <h2>🚀 Skills</h2>
-        <ul>
-            <li>C++, Python, JavaScript</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Web Development (React.js, Node.js)</li>
-        </ul>
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <dl>
+                    <dt><b>Name</b></dt>
+                    <dd> J NITHISH </dd>
+                    <dt><b>SRN</b></dt>
+                    <dd> 01FE23BCI069 </dd>
+                    <dt><b>Course Name</b></dt>
+                    <dd> Design And Analysis Of Algorithms </dd>
+                    <dt><b>Course Code</b></dt>
+                    <dd> 24ECAC203 </dd>
+                    <dt><b>Course Instructor</b></dt>
+                    <dd> K.M.M.Rajashekharaiah </dd>
+                    <dt><b>University</b></dt>
+                    <dd> KLE Technological University </dd>
+                    <dt><b>Portfolio Topic/Domain</b></dt>
+                    <dd> DAA Course Project </dd>
+                </dl>
 
-        <h2>🌐 Find Me Online</h2>
-        <ul>
-            <li><a href="https://github.com/your-github-username" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
-        </ul>
+                <h2>🚀 Skills</h2>
+                <ul>
+                    <li><i class="fas fa-code"></i> C++, Python, JavaScript</li>
+                    <li><i class="fas fa-database"></i> Data Structures and Algorithms</li>
+                    <li><i class="fas fa-laptop-code"></i> Web Development (React.js, Node.js)</li>
+                </ul>
 
-        <h2>Portfolio Topic</h2>
-        <dl>
-            <dt>Course Name</dt>
-            <dd>Design and Analysis of Algorithms</dd>
+                <h2>🌐 Find Me Online</h2>
+                <ul>
+                    <li><a href="https://github.com/nithish-213" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/nithish-j-634b112a9" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </section>
 
-            <dt>Course Code</dt>
-            <dd>24ECAC203</dd>
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <h2>🛠️ Projects</h2>
+            <div class="project-card">
+                <h3>Smart Power Distribution</h3>
+                <p>Optimizing Electricity Efficiency for Specific Area Needs</p>
+            </div>
+        </section>
+    </main>
 
-            <dt>Name</dt>
-            <dd>Chirag</dd>
+    <footer>
+        <p>
+            Copyright &copy; <span id="year"></span> -
+            <a href="https://github.com/nithish-213" target="_blank">Nithish</a> - All Rights Reserved.
+        </p>
+    </footer>
 
-            <dt>SRN</dt>
-            <dd>01fe23bci005</dd>
-
-            <dt>Course Instructor</dt>
-            <dd>K.M.M.Rajashekharaiah</dd>
-
-            <dt>University</dt>
-            <dd>KLETECH</dd>
-
-            <dt>Portfolio Topic/Domain</dt>
-            <dd>DAA Course Project</dd>
-        </dl>
-
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
-    </section>
+    <!-- JS -->
+    <script src="./script.js"></script>
 </body>
+
 </html>
