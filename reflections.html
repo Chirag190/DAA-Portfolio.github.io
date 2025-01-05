@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Chirag, a passionate web developer skilled in web development, C++, Python, JavaScript, and algorithms."
+    />
+    <meta
+      name="keywords"
+      content="Chirag, portfolio, web developer, DAA project, KLE Technological University"
+    />
+    <meta name="author" content="Chirag" />
+    <meta
+      property="og:title"
+      content="Chirag - Web Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore my skills, projects, and contact details."
+    />
+    <title>Chirag - Reflections</title>
+
+    <!-- Font Awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/a9cdbedf57.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Styling CSS -->
+    <link rel="stylesheet" id="themeStylesheet" href="./style.css" />
+
+    <!-- External Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h2 class="hero-section__desc"><span>Course Project</span></h2>
+      </div>
+    </header>
+
+    <main>
+   <!-- DAA Lab Reflections -->
+      <section class="about-section" id="about">
+        <div class="about-content">
+          <h2 class="title">DAA Lab Reflections</h2>
+
+          <!-- Key Concepts Learned -->
+          <h3>Key Concepts Learned</h3>
+          <ul>
+            <li>Time Complexity Analysis</li>
+            <li>Binary Search Tree</li>
+            <li>DFS and BFS</li>
+            <li>Heap</li>
+            <li>Sorting</li>
+            <li>Pattern Searching</li>
+            <li>Graph Algorithms</li>
+          </ul>
+
+          <!-- Challenges -->
+          <h3>1. Challenges in Learning/Understanding the Above Concepts</h3>
+          <ul>
+            <li>
+              <b>Time Complexity Analysis:</b>Abstract Nature of Big-O Notation,Analyzing Worst, Average, and Best Cases,Recursive Algorithm Analysis,
+                 Data Structure Dependencies,Space Complexity Considerations,Real-World Implications,Handling Large Data Sets
+            </li>
+            <li>
+              <b>Binary Search Tree:</b>Understanding the balancing process (e.g., AVL or Red-Black Trees).
+                 Visualizing skewed trees and their impact on performance.
+            </li>
+            <li>
+              <b>DFS and BFS:</b>Grasping the difference between the two traversals and their appropriate use cases.
+                 Understanding the recursive nature of DFS and the queue-based nature of BFS.
+            </li>
+            <li>
+              <b>Heap:</b>Visualizing the heap structure and understanding the heapify process.
+                 Differentiating between min-heap and max-heap.
+            </li>
+            <li>
+              <b>Sorting:</b>Understanding the divide-and-conquer approach in Quick Sort and Merge Sort.
+                 Knowing when to use different sorting algorithms based on input characteristics.
+            </li>
+            <li>
+              <b>Pattern Searching:</b>Grasping the logic behind efficient algorithms like KMP and Rabin-Karp.
+                 Understanding preprocessing steps (e.g., failure function in KMP).
+            </li>
+            <li>
+              <b>Graph Algorithms:</b>Visualizing graphs and their representations (adjacency list vs. matrix).
+                 Understanding the implications of graph density on algorithm performance.
+                 Grasping the concepts of shortest paths and minimum spanning trees.
+            </li>
+          </ul>
+
+          <h3>2. Challenges in Correlating with Real-World Applications</h3>
+          <ul>
+            <li>
+              <b>Time Complexity Analysis:</b> Abstract Nature of Theoretical Analysis
+              Real-World Constraints and Environment.
+            </li>
+            <li>
+              <b>Binary Search Tree:</b>Databases and file systems often use balanced BSTs (like B-trees) to manage indexes.
+            </li>
+            <li>
+              <b>DFS and BFS:</b> DFS is used in solving puzzles, mazes, and connectivity problems,
+                 while BFS is useful in shortest path problems, web crawlers, and broadcasting messages in a network.
+            </li>
+            <li>
+              <b>Heap:</b> Heaps are used in priority scheduling (like job scheduling in operating systems),
+                 where understanding how heap properties ensure efficient access to the highest or lowest priority element is essential.
+            </li>
+            <li>
+              <b>Sorting:</b> Sorting is fundamental in various applications like search engines, data analysis,
+                 and e-commerce, where quick and efficient data ordering improves user experience and system performance.
+            </li>
+            <li>
+              <b>Pattern Searching:</b>These algorithms are used in text processing, plagiarism detection, and bioinformatics,
+                 requiring a grasp of how preprocessing and efficient searching improve speed and accuracy.
+            </li>
+            <li>
+              <b>Graph Algorithms:</b>Graph algorithms are essential in optimizing routes, network flows, and social network connections,
+                 where understanding the algorithm's role in reducing costs or improving efficiency is key.
+            </li>
+          </ul>
+          
+          <h3>3. Determining the Most Efficient Approach/Design Techniques</h3>
+          <ul>
+            <li>
+              <b>Time Complexity Analysis:</b> Start with brute force and
+              optimize incrementally by analyzing time complexity.
+            </li>
+            <li>
+              <b>Binary Search Tree:</b> Use AVL or Red-Black Trees for balanced
+              data storage and retrieval.
+              <pre>
+                void insert(Node*& root, int value) {
+                if (root == nullptr) {
+                root = new Node(value);
+                return;
+                }
+                if (value < root->data) {
+                  insert(root->left, value);
+                  }
+                  else {
+                  insert(root->right, value);
+                  }
+                  root = balance(root);
+                  }
+              </pre>
+            </li>
+            <li>
+              <b>DFS and BFS:</b> Choose DFS for pathfinding problems and BFS
+              for shortest path in unweighted graphs.
+              <pre>
+                void BFS(Graph& g, int start) {
+                queue q;
+                vector visited(g.size(), false);
+                q.push(start);
+                visited[start] = true;
+                while (!q.empty()) {
+                int node = q.front();
+                q.pop();
+                cout << node << " ";
+                  for (int neighbor : g[node]) {
+                  if (!visited[neighbor]) {
+                  q.push(neighbor);
+                  visited[neighbor] = true;
+                  }
+                  }
+                  }
+                  }
+                </pre>
+            </li>
+                  <li>
+                    <b>Heap:</b> Use heaps for implementing efficient priority queues.
+                    <pre>
+                      void heapify(vector& heap, int n, int i) {
+                      int largest = i;
+                      int left = 2 * i + 1;
+                      int right = 2 * i + 2;
+                      if (left < n && heap[left] > heap[largest])
+                        largest = left;
+                        if (right < n && heap[right] > heap[largest])
+                          largest = right;
+                          if (largest != i) {
+                          swap(heap[i], heap[largest]);
+                          heapify(heap, n, largest);
+                          }
+                          }
+                        </pre>
+                  </li>
+                          <li>
+                            <b>Sorting:</b> Use MergeSort for stability, QuickSort for in-place sorting, and HeapSort for space efficiency.
+                            <pre>
+                              void quickSort(vector& arr, int low, int high) {
+                              if (low < high) {
+                              int pi = partition(arr, low, high);
+                              quickSort(arr, low, pi - 1);
+                              quickSort(arr, pi + 1, high);
+                              }
+                              }
+                            </pre>
+                          </li>
+                                <li>
+                                  <b>Pattern Searching:</b> Apply KMP or Rabin-Karp for pattern matching in large datasets efficiently.
+                                  <pre>
+                                    void computeLPSArray(string pattern, int M, int* lps) {
+                                    int len = 0;
+                                    lps[0] = 0;
+                                    int i = 1;
+                                    while (i < M) {
+                                    if (pattern[i] == pattern[len]) {
+                                    len++;
+                                    lps[i] = len;
+                                    i++;
+                                    }
+                                    else {
+                                    if (len != 0) {
+                                    len = lps[len - 1];
+                                    }
+                                    else {
+                                    lps[i] = 0;
+                                    i++;
+                                    }
+                                    }
+                                    }
+                                    }
+                                  </pre>
+                                </li>
+                                      <li>
+                                        <b>Graph Algorithms:</b> Use Dijkstra for shortest paths, Prim or Kruskal for MST, and Bellman-Ford for graphs with negative weights.
+                                        <pre>
+                                          void dijkstra(vector>>& graph, int src) {
+                                          priority_queue, vector>, greater>> pq;
+                                          vector dist(graph.size(), INT_MAX);
+                                          pq.push({0, src});
+                                          dist[src] = 0;
+                                          while (!pq.empty()) {
+                                          int u = pq.top().second;
+                                          pq.pop();
+                                          for (auto& neighbor : graph[u]) {
+                                          int v = neighbor.first;
+                                          int weight = neighbor.second;
+                                          if (dist[u] + weight < dist[v]) {
+                                          dist[v] = dist[u] + weight;
+                                          pq.push({dist[v], v});
+                                          }
+                                          }
+                                          }
+                                          }
+                                        </pre>
+                                      </li>
+         </ul>
+        </div>
+
+        <div class="about-content">
+          <h2 class="title">DAA Theory Reflections</h2>
+          <ol>
+                 <li>
+                    What are the kinds of problems we see in nature? (iteration, recursion, backtracking)
+                    <p class="ans">
+                        In nature, we can see problems being solved in ways similar to computational techniques like iteration, recursion, and backtracking. 
+                        For example,Iteration many animals, such as birds and whales, migrate in patterns that repeat annually. This can be seen as an iterative process based on environmental factors like temperature and food availability. 
+                        Recursion  Certain behaviors of animals, like the way wolves or lions hunt in packs, often rely on recursive strategies where each member of the group contributes to a larger goal through similar smaller actions, repeating patterns. 
+                        Backtracking happens in both humans and animals often employ backtracking during problem-solving tasks or learning new skills, revisiting earlier steps if they make an incorrect decision or reach an incorrect conclusion.
+                        This is seen in trial-and-error processes, such as when an animal learns to find food or when a human learns to solve a puzzle.
+                    </p>
+                </li>
+                <li>
+                    What is space and time efficiency? Why are they important? Explain the different classes of problems and orders of growth.
+                    <p class="ans">Space Complexity: Is the extra space taken by an algorithm to execute. Time complexity: Time taken by an algorithm to execute is called time complexity. Space and time complexity are important for evaluating the efficiency of algorithms.
+                        They help programmers understand how an algorithm performs and whether it is suitable for specific applications. The orders of growth of an algorithm describe how time or space requirements grow as the input size increases.
+                        <br> O(1) -> constant order of growth <br> O(n) -> linear order of growth <br> O(log n) -> logarithmic order of growth
+                    </p>
+                </li>
+                <li>
+                    Take away from different design principles from chapter 2?
+                    <p class="ans">After studying different algorithms, the key ideas started to make sense. Learning how AVL trees and Red-Black trees maintain balance highlighted the importance of structures in data and efficient operations.
+                        Comparing brave and cautious travel to DFS and BFS in graph traversal showed how different strategies can solve problems effectively. Finally, understanding how various sorting algorithms work, such as dividing and merging or swapping elements, helped to understand their logic. In all, these concepts have provided a solid foundation for the principles of algorithms.
+                    </p>
+                </li>
+                <li>
+                    The hierarchical data and how different tree data structures solve and optimize over problem scenarios (tree, bst, avl, 2-3, red-black, heap, trie)
+                    <p class="ans">Tree data structures help organize hierarchical data efficiently and solve various problems. Binary search trees improve searching by ordering the roots, but they are not balanced.
+                        A 2-3 tree is a self-balancing tree designed to keep operations efficient by keeping all leaf nodes at the same level, but this still introduces skewness in the tree. Hence, we moved towards the AVL tree, which was balanced based on a balancing factor and rotations. Further, to reduce the number of rotations, we moved to the Red-Black tree.
+                        Heap is a complete binary tree that ensures the heap property. Heaps are good for priority queues. A Trie is a tree data structure primarily used for storing strings. Tries are used for tasks like autocomplete and prefix search.
+                    </p>
+                </li>
+                <li>
+                    The need for array query algorithms and their implications. Their applications and principles need to be discussed.
+                    <p class="ans">Array queries are necessary for efficiently handling large amounts of data with frequent updates. Lookup tables are good for precomputing and storing results to allow fast retrieval during range queries. Segment trees are versatile structures and useful for efficient updates. An alternative to these is BIT with simpler code for range queries, operating on the principle of isolating the last bit.
+                    </p>
+                </li>
+                <li>
+                    Differentiate between tree and graphs and their traversals. The applications of each.
+                    <p class="ans">Trees and graphs are both structures used to organize data, but they differ in many ways. A tree is a hierarchical structure with one root node and no cycles, whereas a graph is a set of nodes connected together by edges, and it can have cycles.
+                        <br>Tree traversal:<br> 1. Pre-order<br> 2. In-order<br> 3. Post-order<br><br>
+                        Graph traversal:<br> 1. DFS (Depth First Search): Brave Traversal<br> 2. BFS (Breadth First Search): Cautious Traversal<br><br>
+                        Trees are used for representing hierarchical data and for searching the shortest path and sorting. Graphs are used in applications for finding the shortest path.
+                    </p>
+                </li>
+                <li>
+                    Deliberate on sorting and searching algorithms, the technique behind each and how they connect to the real world.
+                    <p class="ans">Sorting and searching algorithms are important for organizing and finding data efficiently, with many real-world uses. Sorting algorithms like quick sort and merge sort arrange data in order, which is helpful in tasks like organizing products for e-commerce websites. Searching algorithms like binary search locate specific items, used in search engines and e-commerce websites.
+                    </p>
+                </li>
+                <li>
+                    Discuss the importance of graph algorithms with respect to spanning trees and shortest paths.
+                    <p class="ans">Graphs are important with respect to spanning trees to calculate MST (Minimum Spanning Tree), which is used to connect all the nodes in the graph with the least cost, making it useful for laying roads and pipelines. Shortest path algorithms, such as Dijkstra's, help in finding the quickest or shortest way to travel between nodes, which is useful in GPS navigation apps.
+                    </p>
+                </li>
+                <li>
+                    Discuss the different studied algorithm design techniques.
+                    <p class="ans">Different algorithms studied:<br>1. Backtracking: It involves exploring all possible solutions and pruning the ones that do not lead to a solution, learned with the example of the N-queens problem.<br><br>2.Sorting Algorithms: <br> i. Divide and conquer: Quick and Merge Sort<br> ii. Comparison-Based: Selection Sort, Insertion Sort, Bubble Sort.<br><br> 3. Brute force: Solving a problem by trying all possible solutions one-by-one.<br><br> 4. String search algorithms: <br> i. Boyer-Moore<br> ii. Knuth-Morris-Pratt<br> iii. Rabin-Karp<br><br> 5. Shortest path algorithms: <br> i. Dijkstra's<br> ii. Floyd's<br> iii. Warshall's<br> iv. Prim's</p>
+                </li>
+            </ol>
+        </div>
+
+      </section>
+      </main>
+    <!-- Footer -->
+    <footer>
+      <p>
+        Copyright &copy; <span id="year"></span>
+        <a href="https://github.com/Chirag190" target="_blank" rel="noopener"
+          >Chirag</a
+        >
+        - All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+  </body>
+</html>
